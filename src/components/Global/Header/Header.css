@@ -1,0 +1,34 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.user-info ul{
+    display: flex;
+    position: relative;
+    top: 5px;
+}
+
+.user-info ul li{
+    padding: 0px 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.user-info ul li span{
+    color: #00B4F9;
+    padding-right: 6px;
+}
+
+.collapse-btn span{
+    color: #00B4F9;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.collapse-btn:hover span{
+    color: #36c3fa;
+}

@@ -1,0 +1,34 @@
+.main-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px auto;
+}
+
+
+
+
+.main-left-area{
+    width: auto;
+
+}
+
+.main-right-area{
+    width: 100%;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.main-header{
+    width: 100%;
+    height: auto;
+}
+
+.main-content{
+    width: 100%;
+    height: auto;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
