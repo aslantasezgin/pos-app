@@ -22,7 +22,7 @@ return(
       <MenuItem className='menu-item'><span><i class="fa-solid fa-box"></i></span>All Products </MenuItem>
       <MenuItem className='menu-item'><span><i class="fa-solid fa-boxes-stacked"></i></span>Product Categories </MenuItem>
     </SubMenu>
-    <MenuItem className='menu-item'><span><i class="fa-solid fa-basket-shopping"></i></span>Orders </MenuItem>
+    <MenuItem className='menu-item' component={<NavLink to="/orders"></NavLink>}><span><i class="fa-solid fa-basket-shopping"></i></span>Orders </MenuItem>
     <MenuItem className='menu-item'><span><i class="fa-solid fa-users"></i></span>Users </MenuItem>
 
   
