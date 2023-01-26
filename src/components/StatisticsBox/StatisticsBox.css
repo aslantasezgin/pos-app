@@ -1,0 +1,35 @@
+
+.statistics-box{
+    width: 24%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius:10px;
+
+    cursor: pointer;
+    margin:0px 5px;
+    margin-bottom: 20px;
+}
+
+.statistics-box .icon-box i{
+    font-size: 40px;
+    color: #fff;
+    padding-right:25px;
+}
+
+.statistics-box h2{
+    font-size: 35px;
+    text-align: right;
+    color: #fff;
+    font-weight: 900;
+}
+
+.statistics-box p{
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: right;
+
+}

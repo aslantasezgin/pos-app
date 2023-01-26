@@ -1,3 +1,4 @@
+import Statistics from "../../components/Statistics/Statistics"
 import MainLayout from "../../layouts/MainLayout/MainLayout"
 
 
@@ -5,7 +6,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout"
 const HomeView = () => {
     return(
         <MainLayout>
-           Home Page
+          <Statistics></Statistics>
         </MainLayout>
     )
 }

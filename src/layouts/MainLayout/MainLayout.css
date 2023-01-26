@@ -4,6 +4,7 @@
     display: flex;
     justify-content: flex-start;
     margin: 0px auto;
+    background-color: #EFF3F7;
 }
 
 
@@ -16,7 +17,7 @@
 
 .main-right-area{
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 0px;
     overflow: hidden;
 }
 

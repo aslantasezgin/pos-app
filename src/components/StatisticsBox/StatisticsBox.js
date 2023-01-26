@@ -1,18 +1,18 @@
 
+import './StatisticsBox.css'
 
 
 
 
 
-
-const StatisticsBox = () => {
+const StatisticsBox = (props) => {
 return(
     
-<div className="statistics-box">
-    <div className="icon-box"></div>
+<div className="statistics-box" style={{backgroundColor:`${props.backgroundColor}`}}>
+    <div className="icon-box"><i class={props.icon}></i></div>
     <div className="statistics-text">
-       <h2>$ 321.4B</h2> 
-       <p>Sales</p>
+       <h2>{props.price + "k"}</h2> 
+       <p>{props.title}</p>
     </div>
 </div>
 )

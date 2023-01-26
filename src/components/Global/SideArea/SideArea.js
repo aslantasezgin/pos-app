@@ -10,7 +10,7 @@ const SideArea = () => {
 
 return(
 
- <Sidebar collapsedWidth="65px" className='side-bar' style={{ display: 'flex', flexDirection: 'column', height: '100%'} } >
+ <Sidebar collapsedWidth="65px" className='side-bar' style={{ display: 'flex', flexDirection: 'column', height: '100vh'} } >
 
     <div className='logo-box'>
     <img src={LOGO}></img> 
