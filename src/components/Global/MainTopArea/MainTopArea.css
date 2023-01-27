@@ -1,0 +1,17 @@
+.main-top-area{
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.main-button{
+    background-color: #6571FF!important;
+    transition: all 0.1s;
+}
+
+.main-button:hover{
+    background-color: #4e5cfd!important;
+
+}

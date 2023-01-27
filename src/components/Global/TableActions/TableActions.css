@@ -1,0 +1,21 @@
+
+.table-actions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-actions span{
+ 
+    padding: 0px 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.table-delete{
+    color: red;
+}
+
+.table-edit{
+    color: #00B4F9;
+}

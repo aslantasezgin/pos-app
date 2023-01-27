@@ -29,7 +29,12 @@
 .main-content{
     width: 100%;
     height: auto;
-    padding-left: 40px;
-    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
 }
 
+
+button:hover{
+    background-color: #6571FF;
+}

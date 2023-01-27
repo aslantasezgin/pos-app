@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom"
 import HomeView from "../view/HomeView/HomeView"
 import OrdersView from "../view/OrdersView/OrdersView"
+import ProductCategoriesView from "../view/ProductsView/ProductCategoriesView/ProductCategoriesView"
 
 
 
@@ -29,7 +30,7 @@ element:<HomeView></HomeView>
 
 {
 path:'/products',
-element:'',
+element:<ProductCategoriesView/>,
 
 children:[
 {
@@ -38,7 +39,7 @@ element:''
 },
 {
 path:'productCategories',
-element:''
+element:<ProductCategoriesView/>
 },
 {
 path:'createProductCategories',
