@@ -16,7 +16,7 @@ return(
 
 <div className="user-info">
 <ul>
-<li><span><i class="fa-solid fa-gear"></i></span></li>
+<li><span><i class="fa-solid fa-cart-plus"></i></span> POS</li>
 <li><span><i class="fa-regular fa-user"></i></span> Sezgin Aslantaş</li>
 </ul>
 </div>
