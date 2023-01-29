@@ -2,7 +2,6 @@
 import TableActions from '../Global/TableActions/TableActions';
 import './ProductCategories.css'
 import DataTable from 'react-data-table-component';
-import { useMemo } from 'react';
 
 
 
@@ -58,13 +57,13 @@ const ProductCategories = (props) => {
     const data = [
         {
             id: 1,
-            productCategory: 'Beetlejuice',
+            productCategory: 'Categorie 2',
             productCount: '1988',
             action: <TableActions></TableActions>
         },
         {
             id: 2,
-            productCategory: 'aeetlejuice',
+            productCategory: 'Categorie 1',
             productCount: '1988',
             action: <TableActions></TableActions>
 

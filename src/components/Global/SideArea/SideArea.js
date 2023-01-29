@@ -13,13 +13,13 @@ return(
  <Sidebar collapsedWidth="65px" className='side-bar' style={{ display: 'flex', flexDirection: 'column', height: '100vh'} } >
 
     <div className='logo-box'>
-    <img src={LOGO}></img> 
+    <NavLink to="/home"> <img  src={LOGO}></img> </NavLink>
     </div>
 
   <Menu>
   <MenuItem className='menu-item' component={<NavLink to="/home"></NavLink>}> <span><i class="fa-solid fa-house-user"></i></span>Home </MenuItem>
     <SubMenu className='sub-menu menu-item' icon={<span><i class="fa-solid fa-box"></i> </span>} label="Products">
-      <MenuItem className='menu-item'><span><i class="fa-solid fa-box"></i></span>All Products </MenuItem>
+      <MenuItem className='menu-item' component={<NavLink to="/products"></NavLink>} ><span><i class="fa-solid fa-box"></i></span>All Products </MenuItem>
       <MenuItem className='menu-item' component={<NavLink to="/products/productCategories"></NavLink>}><span><i class="fa-solid fa-boxes-stacked"></i></span>Product Categories </MenuItem>
     </SubMenu>
     <MenuItem className='menu-item' component={<NavLink to="/orders"></NavLink>}><span><i class="fa-solid fa-basket-shopping"></i></span>Orders </MenuItem>
