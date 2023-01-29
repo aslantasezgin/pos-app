@@ -4,6 +4,7 @@ import OrdersView from "../view/OrdersView/OrdersView"
 import CreateProductView from "../view/ProductsView/CreateProductView.js/CreateProductView"
 import ProductCategoriesView from "../view/ProductsView/ProductCategoriesView/ProductCategoriesView"
 import ProductsView from "../view/ProductsView/ProductsView"
+import UsersView from "../view/UsersView/UsersView"
 
 
 
@@ -27,7 +28,7 @@ element:<HomeView></HomeView>
     },
     {
     path:'/users',
-    element:''
+    element:<UsersView></UsersView>
     },
 
 {
