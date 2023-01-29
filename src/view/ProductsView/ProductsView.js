@@ -12,7 +12,7 @@ const ProductsView = () => {
     return(
         <MainLayout>
             <MainTopArea>
-          <NavLink to="/products/productCategories">  <button  className="main-button" style={{ padding:" 13px 17px", fontSize:"15px", color:"#FFF", border:"0px", 
+          <NavLink to="/products/createProduct">  <button  className="main-button" style={{ padding:" 13px 17px", fontSize:"15px", color:"#FFF", border:"0px", 
         borderRadius:"8px", cursor:"pointer"
     }} >Create Product</button> </NavLink>
 

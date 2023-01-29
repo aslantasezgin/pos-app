@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom"
 import HomeView from "../view/HomeView/HomeView"
 import OrdersView from "../view/OrdersView/OrdersView"
+import CreateProductView from "../view/ProductsView/CreateProductView.js/CreateProductView"
 import ProductCategoriesView from "../view/ProductsView/ProductCategoriesView/ProductCategoriesView"
 import ProductsView from "../view/ProductsView/ProductsView"
 
@@ -38,7 +39,7 @@ element:<ProductsView></ProductsView>
 },
 {
 path:'createProduct',
-element:''
+element:<CreateProductView></CreateProductView>
 },
 {
 path:'productCategories',
