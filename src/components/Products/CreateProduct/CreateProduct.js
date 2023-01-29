@@ -3,6 +3,8 @@ import * as React from 'react';
 import { InputLabel, Modal, Box, Button, Typography, Select, MenuItem, FormControl} from "@mui/material"
 import TextField from '@mui/material/TextField';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateProduct = () => {
 
@@ -20,6 +22,8 @@ const CreateProduct = () => {
     const handleOpen = () => {
       setOpen(true);
     };
+
+    const notify = () => toast.success("Product Added!");
 
     return(
        <Box sx={{py:6, px:2}}>
@@ -49,13 +53,13 @@ const CreateProduct = () => {
 
       <TextField id="productPrice" label="Product Price" type="text" required sx={{mb:4, mr:1, width:'49%'}}></TextField>
 
-      <Button  variant="outlined" size="large" sx={{'&:hover': {
+      <Button onClick={notify}  variant="outlined" size="large" sx={{'&:hover': {
     backgroundColor: '#0069d9',
     borderColor: '#0062cc',
     boxShadow: 'none',
     color:'#fff',
   },}}>SAVE</Button>
-
+    <ToastContainer />
        </Box>
     )
 }
