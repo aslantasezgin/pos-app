@@ -8,11 +8,7 @@ const OrdersView = () => {
     return(
   <MainLayout>
   
-   <MainTopArea>
- <button  className="main-button" style={{ padding:" 13px 17px", fontSize:"15px", color:"#FFF", border:"0px", 
-        borderRadius:"8px", cursor:"pointer"
-    }} >Orders</button> 
-   </MainTopArea>
+
 
    <MainBottomArea>
     <Orders></Orders>

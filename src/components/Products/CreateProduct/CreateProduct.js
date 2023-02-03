@@ -23,7 +23,7 @@ const CreateProduct = () => {
       setOpen(true);
     };
 
-    const notify = () => toast.success("Product Added!");
+    const notify = () => toast.success("Success");
 
     return(
        <Box sx={{py:6, px:2}}>
