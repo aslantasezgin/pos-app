@@ -2,9 +2,22 @@
 import TableActions from '../Global/TableActions/TableActions';
 import './Products.css'
 import DataTable from 'react-data-table-component';
+import { ToastContainer, toast } from 'react-toastify';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 
 const Products = () => {
+
+
+    const {productList} = useSelector(state => state.product)
+    console.log(productList)
+    const [productData, setProductData] = useState([])
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+    setProductData(productList)   
+    },[productList] )
 
     const customStyles = {
         rows: {
@@ -64,64 +77,13 @@ const Products = () => {
             sortable:true
         },
     ];
-    
-    const data = [
-        {
-            id: 1,
-            product:<img className='data-img' src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"></img>,
-            productName:'Pizza',
-            productCode: <span className='product-code'>300</span>,
-            productPrice: '100',
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-        {
-            id: 2,
-            product:<img className='data-img' src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"></img>,
-            productName:'Pizza',
-            productCode: <span className='product-code'>300</span>,
-            productPrice: '100',
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-        {
-            id: 3,
-            product:<img className='data-img' src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"></img>,
-            productName:'Pizza',
-            productCode: <span className='product-code'>300</span>,
-            productPrice: '100',
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-        {
-            id: 4,
-            product:<img className='data-img' src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"></img>,
-            productName:'Pizza',
-            productCode: <span className='product-code'>300</span>,
-            productPrice: '100',
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-        {
-            id: 5,
-            product:<img className='data-img' src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"></img>,
-            productName:'Pizza',
-            productCode: <span className='product-code'>300</span>,
-            productPrice: '100',
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-    ]
+
+
 
     return(
         <div>
-                   <DataTable    columns={columns} data={data} customStyles={customStyles} />
-
+                   <DataTable    columns={columns} data={productData} customStyles={customStyles} />
+                <ToastContainer></ToastContainer>
         </div>
     )
 

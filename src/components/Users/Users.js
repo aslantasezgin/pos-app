@@ -60,6 +60,7 @@ const Users = () => {
     ];
     
     const data = [
+        
         {
             id: 1,
             userName:'Sezgin',
