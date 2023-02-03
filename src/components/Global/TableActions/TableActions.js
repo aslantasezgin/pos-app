@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux'
 import { deleteProduct } from '../../../store/actions/productActions'
 import './TableActions.css'
+import { NavLink } from 'react-router-dom';
 
 
 const TableActions = ({productId}) => {
@@ -12,7 +13,7 @@ const TableActions = ({productId}) => {
 
     return(
     <div className="table-actions">
-     <span className='table-edit'><i class="fa-solid fa-pen-to-square"></i></span>
+    <NavLink to={`setProduct/${productId}`}><span className='table-edit'><i class="fa-solid fa-pen-to-square"></i></span></NavLink> 
      <span onClick={() => {
         notify()
         dispatch(deleteProduct(productId))
