@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { NavLink, useParams } from 'react-router-dom';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../../../store/actions/productActions";
+import { addProduct, updateProduct } from "../../../store/actions/productActions";
 import TableActions from "../../Global/TableActions/TableActions";
 
 const SetProduct = () => {
@@ -20,7 +20,7 @@ const SetProduct = () => {
     const [productName, setProductName] = useState('')
     const [productCode, setProductCode] = useState('')
     const [productIMG, setProductIMG] = useState('')
-    const [productCategory, setProductCategory] = useState('')
+    const [productCategory, setProductCategory] = useState(data.productCategory)
     const [productPrice, setProductPrice] = useState('')
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false);
@@ -66,9 +66,11 @@ const SetProduct = () => {
           onChange={(e) => {
             setProductCategory(e.target.value)
           }}
+
+          value={productCategory}
         >
             
-          <MenuItem value="Foods">Foods</MenuItem>
+          <MenuItem value="Foods" >Foods</MenuItem>
           <MenuItem value="Drinks">Drinks</MenuItem>
 
         </Select>
@@ -80,7 +82,7 @@ const SetProduct = () => {
 
     <NavLink to="/products">   <Button onClick={() => {
       notify()
-      dispatch(addProduct({id:productCode,product:<img className='data-img' src={productIMG}></img>, productName: productName, productCode:<span className='product-code'> {productCode} </span>, productPrice:productPrice,productCategory: productCategory, action:<TableActions productId={productCode}></TableActions>}))
+      dispatch(updateProduct(id,{id:productCode,product:<img className='data-img' src={productIMG}></img>, productName: productName, productCode:<span className='product-code'> {productCode} </span>, productPrice:productPrice,productCategory: productCategory, action:<TableActions productId={productCode}></TableActions>}))
 
     }}  variant="outlined" size="large" sx={{'&:hover': {
     backgroundColor: '#0069d9',
