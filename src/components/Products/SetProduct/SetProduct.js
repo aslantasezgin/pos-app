@@ -12,6 +12,7 @@ import TableActions from "../../Global/TableActions/TableActions";
 
 const SetProduct = () => {
 
+    const {categoryList} = useSelector(state => state.productCategory)
     const {id} = useParams()
     const {productList} = useSelector(state => state.product)
     const data = productList.find(item => item.id === id)
@@ -70,8 +71,14 @@ const SetProduct = () => {
           defaultValue={productCategory}
         >
             
-          <MenuItem value="Foods" >Foods</MenuItem>
-          <MenuItem value="Drinks">Drinks</MenuItem>
+           {categoryList.map((item) => {
+
+          return(
+            <MenuItem value={item.productCategoryName}>{item.productCategoryName}</MenuItem>
+
+          )
+          
+          })}
 
         </Select>
       </FormControl>

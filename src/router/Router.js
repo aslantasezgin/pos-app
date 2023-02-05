@@ -7,6 +7,7 @@ import SetProductView from "../view/ProductsView/SetProductView/SetProductView"
 import ProductCategoriesView from "../view/ProductsView/ProductCategoriesView/ProductCategoriesView"
 import ProductsView from "../view/ProductsView/ProductsView"
 import UsersView from "../view/UsersView/UsersView"
+import PosView from "../view/PosView/PosView"
 
 
 
@@ -52,13 +53,15 @@ element:<SetProductView></SetProductView>
 path:'productCategories',
 element:<ProductCategoriesView/>
 },
-{
-path:'createProductCategories',
-element:''
-},
-]
 
+]
+},
+{
+path:'pos',
+element:<PosView></PosView>
 }
+
+
 
 
 ])

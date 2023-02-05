@@ -6,12 +6,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../../store/actions/productActions";
 import TableActions from "../../Global/TableActions/TableActions";
 
 const CreateProduct = () => {
 
+    const {categoryList} = useSelector(state => state.productCategory)
     const [productName, setProductName] = useState('')
     const [productCode, setProductCode] = useState('')
     const [productIMG, setProductIMG] = useState('')
@@ -57,9 +58,16 @@ const CreateProduct = () => {
             setProductCategory(e.target.value)
           }}
         >
-        
-          <MenuItem value="Foods">Foods</MenuItem>
-          <MenuItem value="Drinks">Drinks</MenuItem>
+          
+          {categoryList.map((item) => {
+
+          return(
+            <MenuItem value={item.productCategoryName}>{item.productCategoryName}</MenuItem>
+
+          )
+          
+          })}
+       
 
         </Select>
       </FormControl>
