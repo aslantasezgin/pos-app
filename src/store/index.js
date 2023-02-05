@@ -1,4 +1,5 @@
 import { combineReducers, createStore } from "redux";
+import productCategoryReducer from "./reducers/productCategoryReducer";
 import productReducer from "./reducers/productReducer";
 
 
@@ -7,7 +8,8 @@ import productReducer from "./reducers/productReducer";
 
 
 const reducer = combineReducers({
-    product:productReducer
+    product:productReducer,
+    productCategory:productCategoryReducer
 })
 
 

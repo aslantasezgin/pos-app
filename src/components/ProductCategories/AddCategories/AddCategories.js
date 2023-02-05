@@ -1,15 +1,23 @@
 import { Modal, Box, Button, Typography} from "@mui/material"
 import TextField from '@mui/material/TextField';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import {addCategory} from "../../../store/actions/productCategoryActions"
+import CategoryTableActions from "../../Global/TableActions/CategoryTableActions";
 
-import * as React from 'react';
 
 
 
 const AddCategories = () => {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-  
+    const notify = () => toast.success("Success");
+
+    const dispatch = useDispatch()
+
+    const [categoryName, setCategoryName] = useState('')
 
     const style = {
         position: 'absolute',
@@ -17,7 +25,7 @@ const AddCategories = () => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 600,
-        height:300,
+        height:220,
         bgcolor: 'background.paper',
         boxShadow: 4,
         py:7,
@@ -46,24 +54,26 @@ const AddCategories = () => {
             shrink: true,
           }}
           sx={{mb:4, width:'100%'}}
-        />
-
- <TextField
-          id="categorie-name"
-          label="Categorie IMG URL"
-          type="text"
-          InputLabelProps={{
-            shrink: true,
+          onChange={(e) => {
+            setCategoryName(e.target.value)
           }}
-          sx={{mb:4, width:'100%'}}
         />
 
-        <Button  variant="outlined" size="medium" sx={{'&:hover': {
+
+
+    <Button  variant="outlined" size="medium" sx={{'&:hover': {
     backgroundColor: '#0069d9',
     borderColor: '#0062cc',
     boxShadow: 'none',
     color:'#fff'
-  },}}>SAVE</Button>
+  },}}  
+    onClick={() => {
+      handleClose()
+      notify()
+      dispatch(addCategory({id:categoryName, productCategoryName:categoryName, action:<CategoryTableActions categoryId={categoryName}></CategoryTableActions>}))
+    }}
+  
+  >SAVE</Button>
         <Button onClick={handleClose} sx={{backgroundColor:"gray", color:"#fff", ml:2, '&:hover': {
             color:"#000"
   },}} variant="outlined" size="medium">CANCEL</Button>

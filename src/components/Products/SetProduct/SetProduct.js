@@ -17,11 +17,11 @@ const SetProduct = () => {
     const data = productList.find(item => item.id === id)
     console.log(data)
 
-    const [productName, setProductName] = useState('')
-    const [productCode, setProductCode] = useState('')
-    const [productIMG, setProductIMG] = useState('')
+    const [productName, setProductName] = useState(data.productName)
+    const [productCode, setProductCode] = useState(data.id)
+    const [productIMG, setProductIMG] = useState(data.product.props.src)
     const [productCategory, setProductCategory] = useState(data.productCategory)
-    const [productPrice, setProductPrice] = useState('')
+    const [productPrice, setProductPrice] = useState(data.productPrice)
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false);
  
@@ -42,16 +42,16 @@ const SetProduct = () => {
        <Box sx={{py:6, px:2}}>
         <TextField id="productName" onChange={(e) => {
           setProductName(e.target.value)
-        }} label={"Product Name"} type="text" value={data.productName} required sx={{mb:4, mr:1, width:'74%'}}></TextField>
+        }} label={"Product Name"} type="text" defaultValue={data.productName} required sx={{mb:4, mr:1, width:'74%'}}></TextField>
 
 
         <TextField id="productCode" onChange={(e) => {
           setProductCode(e.target.value)
-        }} label={"Product Code"} value={data.id}  type="text" required sx={{mb:4, mr:0, width:'24%'}}></TextField>
+        }} label={"Product Code"} defaultValue={data.id}  type="text" required sx={{mb:4, mr:0, width:'24%'}}></TextField>
 
         <TextField id="productIMG" onChange={(e) =>{
           setProductIMG(e.target.value)
-        }} label={"Product Image URL"}  value={data.product.props.src}  type="text" required sx={{mb:4, mr:0, width:'99%'}}></TextField>
+        }} label={"Product Image URL"}  defaultValue={data.product.props.src}  type="text" required sx={{mb:4, mr:0, width:'99%'}}></TextField>
       
         <FormControl sx={{mb: 4, mr:1, minWidth:'49%' }}>
         <InputLabel id="demo-controlled-open-select-label">Product Category</InputLabel>
@@ -67,7 +67,7 @@ const SetProduct = () => {
             setProductCategory(e.target.value)
           }}
 
-          value={productCategory}
+          defaultValue={productCategory}
         >
             
           <MenuItem value="Foods" >Foods</MenuItem>
@@ -78,7 +78,7 @@ const SetProduct = () => {
 
       <TextField id="productPrice" onChange={(e) => {
         setProductPrice(e.target.value)
-      }} label="Product Price" value={data.productPrice}  type="text" required sx={{mb:4, mr:1, width:'49%'}}></TextField>
+      }} label="Product Price" defaultValue={data.productPrice}  type="text" required sx={{mb:4, mr:1, width:'49%'}}></TextField>
 
     <NavLink to="/products">   <Button onClick={() => {
       notify()

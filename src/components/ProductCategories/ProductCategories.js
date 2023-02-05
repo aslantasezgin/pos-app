@@ -2,12 +2,22 @@
 import TableActions from '../Global/TableActions/TableActions';
 import './ProductCategories.css'
 import DataTable from 'react-data-table-component';
+import { ToastContainer } from 'react-toastify';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 
 
 const ProductCategories = (props) => {
 
 
+    const {categoryList} = useSelector(state => state.productCategory)
+    console.log(categoryList)
+    const [categoryData, setCategoryData] = useState([])
+
+    useEffect(() => {
+    setCategoryData(categoryList)
+    }, [categoryList])
 
 
     const customStyles = {
@@ -39,14 +49,10 @@ const ProductCategories = (props) => {
     const columns = [
         {
             name: 'PRODUCT CATEGORY',
-            selector: row => row.productCategory,
+            selector: row => row.productCategoryName,
             sortable:true
         },
-        {
-            name: 'PRODUCT COUNT',
-            selector: row => row.productCount,
-            sortable:true
-        },
+      
         {
             name: 'ACTION',
             selector: row => row.action,
@@ -54,22 +60,7 @@ const ProductCategories = (props) => {
         },
     ];
     
-    const data = [
-        {
-            id: 1,
-            productCategory: 'Categorie 2',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-        },
-        {
-            id: 2,
-            productCategory: 'Categorie 1',
-            productCount: '1988',
-            action: <TableActions></TableActions>
-
-
-        },
-    ]
+  
     
 
 
@@ -77,7 +68,8 @@ return(
   
     
     <div>
-       <DataTable    columns={columns} data={data} customStyles={customStyles} />
+       <DataTable    columns={columns} data={categoryData} customStyles={customStyles} />
+      <ToastContainer/>
     </div>
 
 )

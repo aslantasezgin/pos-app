@@ -6,7 +6,7 @@ import TableActions from "../../components/Global/TableActions/TableActions";
 
 export const posState = {
         productList:[],
-        productCategories:[],
+        categoryList:[],
         Orders:[],
         Users:[]
 }

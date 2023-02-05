@@ -14,7 +14,7 @@ function productReducer(state = posState,action){
 
      case UPDATE_PRODUCT:
      const arr=[...state.productList]
-     const findedIndex = arr.findIndex((item) => item.id === action.paylaod.id)
+     const findedIndex = arr.findIndex((item) => item.id === action.payload.id)
      arr[findedIndex] = action.payload.product
      return {...state,productList:arr}   
 
