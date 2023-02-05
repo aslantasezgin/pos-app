@@ -12,6 +12,7 @@ const PosProducts = () => {
                 minHeight: '72px', // override the row height
                 fontSize:'15px',
                 
+                
               
             },
         },

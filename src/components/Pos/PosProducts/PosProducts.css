@@ -1,7 +1,8 @@
 .pos-products{
-    padding: 10px;
-    height: 70%;
+    padding: 8px;
+    height: 78%;
     overflow-y: auto;
+
     overflow-x: hidden;
 }
 
@@ -9,3 +10,4 @@
     color: red;
     cursor: pointer;
 }
+

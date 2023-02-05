@@ -1,0 +1,48 @@
+.pos-bottom{
+    padding: 10px;
+    height: 20%;
+    padding-top: 9px;
+}
+
+.pos-bottom ul li{
+    width: 100%;
+    padding: 6px 0px;
+    font-size: 20px;
+}
+
+.pos-buttons{
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
+.pos-buttons button{
+    display: inline-block;
+    width: 49%;
+    padding: 12px 0px;
+   border-radius: 9px;
+   border: 0px;
+   font-size: 18px;
+   outline: none;
+   cursor: pointer;
+   color: #fff;
+}
+
+.pos-reset{
+    background-color: #F62947;
+}
+
+.pos-reset:hover{
+    background-color: #f50428;
+
+}
+
+.pos-pay{
+    background-color: #0AC074;
+}
+
+.pos-pay:hover{
+    background-color: #18db8a;
+
+}

@@ -1,4 +1,5 @@
 import { useProSidebar } from 'react-pro-sidebar';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -16,7 +17,7 @@ return(
 
 <div className="user-info">
 <ul>
-<li><span><i class="fa-solid fa-cart-plus"></i></span> POS</li>
+<li><NavLink to="/pos"> <span><i class="fa-solid fa-cart-plus"></i></span> POS</NavLink></li>
 <li><span><i class="fa-regular fa-user"></i></span> Sezgin Aslantaş</li>
 </ul>
 </div>
