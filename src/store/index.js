@@ -1,6 +1,7 @@
 import { combineReducers, createStore } from "redux";
 import productCategoryReducer from "./reducers/productCategoryReducer";
 import productReducer from "./reducers/productReducer";
+import basketReducer from "./reducers/basketReducer";
 
 
 
@@ -9,7 +10,8 @@ import productReducer from "./reducers/productReducer";
 
 const reducer = combineReducers({
     product:productReducer,
-    productCategory:productCategoryReducer
+    productCategory:productCategoryReducer,
+    basket:basketReducer
 })
 
 

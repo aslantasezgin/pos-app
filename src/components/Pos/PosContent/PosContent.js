@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import PosCategories from '../PosCategories/PosCategories'
+import PosProducts from '../PosProducts/PosProducts'
 import './PosContent.css'
 
 
@@ -13,9 +14,16 @@ const PosContent = () => {
     }
 
     return(
+        <>
         <div className='pos-categories'>
             <PosCategories changeProductItem={changeProductItem}></PosCategories>
         </div>
+
+        <div className='posproducts'>
+        <PosProducts></PosProducts>
+        </div>
+        </>
+
     )
 }
 

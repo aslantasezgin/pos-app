@@ -1,0 +1,13 @@
+.pos-products{
+    padding: 8px;
+    height: 78%;
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+.pos-action{
+    color: red;
+    cursor: pointer;
+}
+

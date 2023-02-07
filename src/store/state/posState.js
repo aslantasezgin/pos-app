@@ -21,5 +21,8 @@ export const posState = {
         },
         ],
         Orders:[],
-        Users:[]
+        Users:[],
+        basketList:[
+       
+        ]
 }
