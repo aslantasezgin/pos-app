@@ -24,6 +24,7 @@ return(
     </SubMenu>
     <MenuItem className='menu-item' component={<NavLink to="/orders"></NavLink>}><span><i class="fa-solid fa-basket-shopping"></i></span>Orders </MenuItem>
     <MenuItem className='menu-item' component={<NavLink to="/users"></NavLink>}><span><i class="fa-solid fa-users"></i></span>Users </MenuItem>
+    <MenuItem className='menu-item' component={<NavLink to="/pos"></NavLink>}><span><i class="fa-solid fa-credit-card"></i></span>POS </MenuItem>
 
   
   </Menu>

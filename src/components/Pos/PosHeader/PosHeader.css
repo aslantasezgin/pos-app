@@ -15,7 +15,10 @@
     color: #fff;
     background-color:#0AC074 ;
     padding: 10px;
-    color: #fff;
     font-size:20px;
     border-radius: 10px;
+}
+
+.pos-header ul li i{
+    color: #fff;
 }

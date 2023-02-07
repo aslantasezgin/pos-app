@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PosCategories from '../PosCategories/PosCategories'
 import PosProducts from '../PosProducts/PosProducts'
 import './PosContent.css'
@@ -13,6 +13,7 @@ const PosContent = () => {
         setProductItem(name)
     }
 
+  
     return(
         <>
         <div className='pos-categories'>
@@ -20,7 +21,7 @@ const PosContent = () => {
         </div>
 
         <div className='posproducts'>
-        <PosProducts></PosProducts>
+        <PosProducts productItem={productItem}></PosProducts>
         </div>
         </>
 
