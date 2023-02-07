@@ -17,6 +17,7 @@
     padding: 0px 15px;
     color: #000;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .user-info ul li span{

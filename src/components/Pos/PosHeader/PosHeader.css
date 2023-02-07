@@ -1,0 +1,21 @@
+.pos-header{
+ width: 100%;
+ padding: 10px 10px;
+
+}
+
+.pos-header ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pos-header ul li{
+    display: inline-block;
+    color: #fff;
+    background-color:#0AC074 ;
+    padding: 10px;
+    color: #fff;
+    font-size:20px;
+    border-radius: 10px;
+}

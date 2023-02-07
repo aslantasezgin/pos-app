@@ -1,0 +1,32 @@
+.pos-categories{
+    width: 100%;
+    padding: 6px 0px; 
+}
+
+.pos-categories ul{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.pos-categories ul li{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #EFF3F6;
+    color: #000;
+    font-size: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: all 0.3s;
+}
+
+.pos-categories ul li:hover{
+    background-color: #6571FF;
+    color: #fff;
+}
+
+.pos-categories ul li.active{
+    background-color: #6571FF;
+    color: #fff;
+}

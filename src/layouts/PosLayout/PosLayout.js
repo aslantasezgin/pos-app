@@ -1,3 +1,4 @@
+import PosHeader from "../../components/Pos/PosHeader/PosHeader"
 import PosSidebar from "../../components/Pos/PosSidebar/PosSidebar"
 import './PosLayout.css'
 
@@ -11,7 +12,8 @@ const PosLayout = (props) => {
 
 
     <div className="pos-content-wrapper">
-    <div className="pos-header"></div>
+  
+    <PosHeader></PosHeader>
 
     <div className="pos-content">
     {props.children} 

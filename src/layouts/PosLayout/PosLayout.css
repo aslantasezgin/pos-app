@@ -4,4 +4,15 @@
     display: flex;
     justify-content: flex-start;
     background-color: #E3EFF7;
+    padding: 0px 10px;
 }
+
+.pos-content-wrapper{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    height: 95vh;
+    border-radius: 20px;
+    padding: 15px;
+}
+
