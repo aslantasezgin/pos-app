@@ -47,8 +47,8 @@ const AddCategories = () => {
       >
         <Box sx={style}>
         <TextField
-          id="categorie-name"
-          label="Categorie Name"
+          id="category-name"
+          label="Category Name"
           type="text"
           InputLabelProps={{
             shrink: true,

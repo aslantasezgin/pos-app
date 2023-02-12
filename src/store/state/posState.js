@@ -20,9 +20,7 @@ export const posState = {
    
         },
         ],
-        Orders:[],
+        orderList:[],
         Users:[],
-        basketList:[
-       
-        ]
+        basketList:[]
 }

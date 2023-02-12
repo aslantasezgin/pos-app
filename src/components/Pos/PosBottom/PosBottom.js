@@ -1,9 +1,16 @@
-import { useSelector } from 'react-redux'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addOrder } from '../../../store/actions/orderActions'
 import './PosBottom.css'
 
 const PosBottom = () => {
 
+ 
+
+    const dispatch = useDispatch()
+    const {orderList} = useSelector(state => state.order)
     const {basketList} = useSelector(state => state.basket)
+    const [orderId, setOrderId] = useState(0)
     let total = basketList.reduce(function(prev,current) {
         return prev + +current.price
     }, 0)
@@ -11,16 +18,25 @@ const PosBottom = () => {
         return prev + +current.amount
     }, 0)
 
+    const[personalName,setPersonalName] = useState("Sezgin Aslantaş")
+
     return(
         <div className="pos-bottom">
            <ul>
+            <li><input type="text" onChange={(e) => {
+            setPersonalName(e.target.value)
+            }} placeholder="Enter Personal Name" defaultValue={personalName}></input></li>
             <li>Total QTY:  <b> {totalAmount} </b></li>
             <li>Total: <b>$ {total}</b></li>
            </ul>
 
          <div className="pos-buttons">
-        <button className="pos-reset">Reset <span><i class="fa-solid fa-rotate-left"></i></span></button>    
-        <button className="pos-pay">Pay Now <span><i class="fa-solid fa-money-bill-wave"></i></span></button>
+        <button className="pos-pay" onClick={() => {
+        const id = orderId + 1;
+        setOrderId(id)
+        dispatch(addOrder({id:id,order:basketList,totalAmount:totalAmount,personalName:personalName}))
+        console.log(orderList)
+        }}>Pay Now <span><i class="fa-solid fa-money-bill-wave"></i></span></button>
         </div>  
         </div>
     )

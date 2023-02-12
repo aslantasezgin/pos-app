@@ -19,9 +19,9 @@
 
 .pos-buttons button{
     display: inline-block;
-    width: 49%;
+    width: 100%;
     padding: 12px 0px;
-   border-radius: 9px;
+
    border: 0px;
    font-size: 18px;
    outline: none;
