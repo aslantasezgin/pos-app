@@ -34,7 +34,7 @@ const PosBottom = () => {
         <button className="pos-pay" onClick={() => {
         const id = orderId + 1;
         setOrderId(id)
-        dispatch(addOrder({id:id,order:basketList,totalAmount:totalAmount,personalName:personalName}))
+        dispatch(addOrder({id:id,order:basketList,totalAmount:totalAmount,personalName:personalName,total:total,action:<span className='detail-btn'>Detail</span>}))
         console.log(orderList)
         }}>Pay Now <span><i class="fa-solid fa-money-bill-wave"></i></span></button>
         </div>  

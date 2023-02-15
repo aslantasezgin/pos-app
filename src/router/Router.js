@@ -8,6 +8,7 @@ import ProductCategoriesView from "../view/ProductsView/ProductCategoriesView/Pr
 import ProductsView from "../view/ProductsView/ProductsView"
 import UsersView from "../view/UsersView/UsersView"
 import PosView from "../view/PosView/PosView"
+import OrderDetailView from "../view/OrdersView/OrderDetailView/OrderDetailView"
 
 
 
@@ -27,7 +28,13 @@ element:<HomeView></HomeView>
 
 {
     path:'/orders',
-    element:<OrdersView></OrdersView>
+    element:<OrdersView></OrdersView>,
+    children:[
+    {
+     path:'orderDetail/:id',
+     element:<OrderDetailView></OrderDetailView>
+    }
+    ]
     },
     {
     path:'/users',

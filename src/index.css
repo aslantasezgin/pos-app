@@ -18,3 +18,13 @@
   flex-wrap: wrap;
   margin: 0px auto;
 }
+
+.detail-btn{
+  background-color: slateblue;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 7px;
+}

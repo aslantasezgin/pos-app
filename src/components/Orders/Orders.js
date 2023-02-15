@@ -2,6 +2,7 @@
 import TableActions from '../Global/TableActions/TableActions';
 import DataTable from 'react-data-table-component';
 import './Orders.css'
+import { useSelector } from 'react-redux';
 
 const Orders = () => {
 
@@ -33,24 +34,19 @@ const Orders = () => {
     
     const columns = [
         {
-            name: 'ORDER',
-            selector: row => row.order,
-            sortable:true
-        },
-        {
-            name: 'NAME',
-            selector: row => row.orderProductName,
+            name: 'PERSONAL NAME',
+            selector: row => row.personalName,
             sortable:true
         },
 
         {
-            name:'CODE',
-            selector: row => row.orderProductCode,
+            name:'AMOUNT',
+            selector: row => row.totalAmount,
             sortable:true
         },
         {
             name:'PRICE',
-            selector: row => row.orderProductPrice,
+            selector: row => row.total,
             sortable:true
         },
         {
@@ -60,60 +56,12 @@ const Orders = () => {
         },
     ];
     
-    const data = [
-        {
-            id: 1,
-            order:<img className='data-img' src="https://cdn-icons-png.flaticon.com/512/149/149071.png"></img>,
-            orderProductName:'Pizza',
-            orderProductCode: <span className='product-code'>300</span>,
-            orderProductPrice: '100',
-            action: <TableActions></TableActions>
-        },
-
-        {
-            id: 2,
-            order:<img className='data-img' src="https://cdn-icons-png.flaticon.com/512/149/149071.png"></img>,
-            orderProductName:'Pizza',
-            orderProductCode: <span className='product-code'>300</span>,
-            orderProductPrice: '100',
-            action: <TableActions></TableActions>
-        },
-
-        {
-            id: 3,
-            order:<img className='data-img' src="https://cdn-icons-png.flaticon.com/512/149/149071.png"></img>,
-            orderProductName:'Pizza',
-            orderProductCode: <span className='product-code'>300</span>,
-            orderProductPrice: '100',
-            action: <TableActions></TableActions>
-        },
-
-
-        {
-            id: 4,
-            order:<img className='data-img' src="https://cdn-icons-png.flaticon.com/512/149/149071.png"></img>,
-            orderProductName:'Pizza',
-            orderProductCode: <span className='product-code'>300</span>,
-            orderProductPrice: '100',
-            action: <TableActions></TableActions>
-        },
-
-
-        {
-            id: 5,
-            order:<img className='data-img' src="https://cdn-icons-png.flaticon.com/512/149/149071.png"></img>,
-            orderProductName:'Pizza',
-            orderProductCode: <span className='product-code'>300</span>,
-            orderProductPrice: '100',
-            action: <TableActions></TableActions>
-        },
-    
-    ]
+    const {orderList} = useSelector(state => state.order)
 
    return(
     <div>
 
-                           <DataTable    columns={columns} data={data} customStyles={customStyles} />
+                           <DataTable    columns={columns} data={orderList} customStyles={customStyles} />
 
     </div>
    ) 

@@ -1,0 +1,19 @@
+.order-detail{
+    width: 100%;
+}
+
+.order-detail ul{
+    width: 100%;
+}
+
+.order-detail ul li{
+    display: block;
+    width: 100%;
+    padding: 4px 0px;
+    font-size: 19px;
+}
+
+.order-detail p{
+    font-weight: 700;
+    font-size: 20px;
+}
