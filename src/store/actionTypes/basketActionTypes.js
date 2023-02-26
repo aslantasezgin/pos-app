@@ -1,2 +1,3 @@
 export const ADD_BASKET = "ADD_BASKET"
 export const DELETE_BASKET = "DELETE_BASKET"
+export const RESET_BASKET = "RESET_BASKET"

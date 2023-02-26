@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { resetBasket } from '../../../store/actions/basketActions'
 import { addOrder } from '../../../store/actions/orderActions'
 import './PosBottom.css'
 
@@ -35,8 +36,12 @@ const PosBottom = () => {
         const id = orderId + 1;
         setOrderId(id)
         dispatch(addOrder({id:id,order:basketList,totalAmount:totalAmount,personalName:personalName,total:total,action:<span className='detail-btn'>Detail</span>}))
+        dispatch(resetBasket())
         console.log(orderList)
         }}>Pay Now <span><i class="fa-solid fa-money-bill-wave"></i></span></button>
+        <button className='pos-reset' onClick={() => {
+            dispatch(resetBasket())
+        }}>Reset</button>
         </div>  
         </div>
     )

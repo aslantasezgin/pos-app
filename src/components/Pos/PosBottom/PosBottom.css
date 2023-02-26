@@ -2,12 +2,24 @@
     padding: 10px;
     height: 20%;
     padding-top: 9px;
+    position: relative;
+    top: -40px;
 }
 
 .pos-bottom ul li{
     width: 100%;
     padding: 6px 0px;
     font-size: 20px;
+}
+
+.pos-bottom ul li input{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 4px;
 }
 
 .pos-buttons{
