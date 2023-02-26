@@ -29,13 +29,13 @@ element:<HomeView></HomeView>
 {
     path:'/orders',
     element:<OrdersView></OrdersView>,
-    children:[
-    {
-     path:'orderDetail/:id',
-     element:<OrderDetailView></OrderDetailView>
-    }
-    ]
+ },
+
+ {
+    path:'orders/orderDetail/:id',
+    element:<OrderDetailView></OrderDetailView>
     },
+ 
     {
     path:'/users',
     element:<UsersView></UsersView>

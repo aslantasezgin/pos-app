@@ -10,7 +10,6 @@ const OrderDetailView = () => {
         <MainLayout>
 
         <MainBottomArea>
-            asdasdas
         <OrderDetail></OrderDetail>
         </MainBottomArea>
         </MainLayout>

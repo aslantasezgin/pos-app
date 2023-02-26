@@ -2,11 +2,15 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetBasket } from '../../../store/actions/basketActions'
 import { addOrder } from '../../../store/actions/orderActions'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './PosBottom.css'
+import { NavLink } from 'react-router-dom';
 
 const PosBottom = () => {
 
- 
+    const notify = () => toast.success("Order Created");
+
 
     const dispatch = useDispatch()
     const {orderList} = useSelector(state => state.order)
@@ -35,7 +39,8 @@ const PosBottom = () => {
         <button className="pos-pay" onClick={() => {
         const id = orderId + 1;
         setOrderId(id)
-        dispatch(addOrder({id:id,order:basketList,totalAmount:totalAmount,personalName:personalName,total:total,action:<span className='detail-btn'>Detail</span>}))
+        dispatch(addOrder({id:id,createdOrder:basketList,totalAmount:totalAmount,personalName:personalName,total:total}))
+        notify()
         dispatch(resetBasket())
         console.log(orderList)
         }}>Pay Now <span><i class="fa-solid fa-money-bill-wave"></i></span></button>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import { useSelector } from 'react-redux';
 import './PosBasket.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 const PosBasket = () => {
     
@@ -74,7 +75,7 @@ const PosBasket = () => {
     return(
         <div className="pos-products">
                    <DataTable    columns={columns} data={data} customStyles={customStyles} />
-
+                   <ToastContainer></ToastContainer>
         </div>
     )
 }

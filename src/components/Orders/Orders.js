@@ -39,6 +39,8 @@ const Orders = () => {
             sortable:true
         },
 
+      
+
         {
             name:'AMOUNT',
             selector: row => row.totalAmount,
@@ -49,11 +51,8 @@ const Orders = () => {
             selector: row => row.total,
             sortable:true
         },
-        {
-            name: 'ACTION',
-            selector: row => row.action,
-            sortable:true
-        },
+    
+     
     ];
     
     const {orderList} = useSelector(state => state.order)
